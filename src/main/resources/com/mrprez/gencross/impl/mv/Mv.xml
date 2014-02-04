@@ -1,0 +1,2830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personnage name="MV" version="1.2" gencrossVersion="1.10"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://mrprez.dyndns.org:8080/gencross-web/gencross-plugin.xsd">
+	<phase name="Choix Superieur"/>
+	<phaseList>
+		<phase name="Choix Superieur"/>
+		<phase name="Creation"/>
+		<phase name="Grade 0"/>
+		<phase name="Grade 1"/>
+		<phase name="Grade 2"/>
+		<phase name="Grade 3"/>
+	</phaseList>
+	<pointPools>
+		<pool name="PA" remaining="100" total="100"/>
+		<pool name="Points de talents secondaires" remaining="0" total="0" toEmpty="true"/>
+		<pool name="Pouvoirs de grade" remaining="0" total="0" toEmpty="true"/>
+	</pointPools>
+	<properties>
+		<property editable="true" name="Superieur">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+			<valueChoice>
+				<Value class="com.mrprez.gencross.value.StringValue">Alain - Archange des cultures</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Ange - Archange des convertis</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Blandine - Archange des rêves</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Christophe - Archange des enfants</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Daniel - Archange de la pierre</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Didier - Archange de la communication</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Dominique - Archange de la justice</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Francis - Archange de la diplomatie</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Guy - Archange des guérisseurs</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Janus - Archange des vents</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Jean - Archange de la foudre</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Jean-Luc - Archange des protecteurs</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Jordi - Archange des animaux</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Joseph - Archange de l'inquisition</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Laurent - Archange de l'épée</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Marc - Archange des échanges</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Mathias - Archange de la confusion</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Michel - Archange de la guerre</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Novalis - Archange des fleurs</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Walther - Archange des exorcistes</Value>
+				<Value class="com.mrprez.gencross.value.StringValue">Yves - Archange des sources</Value>
+			</valueChoice>
+		</property>
+		<property editable="true" name="Identité">
+			<Value class="com.mrprez.gencross.value.StringValue"></Value>
+		</property>
+		<property editable="false" name="Grade">
+			<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+		</property>
+		<property editable="false" name="Caracteristiques">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="false" name="Force">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1.5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Agilité">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1.5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Perception">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1.5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Volonté">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1.5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Présence">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1.5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Foi/Chance">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">2</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">5.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+				</properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>PA</pointPool>
+				<args>
+					<arg key="factor">2</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Blessures">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="false" name="Points de fatigue">
+						<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+					</property>
+					<property editable="false" name="Blessures légères">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+					</property>
+					<property editable="false" name="Blessures graves">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+					</property>
+					<property editable="false" name="Blessures fatales">
+						<Value class="com.mrprez.gencross.value.IntValue">15</Value>
+					</property>
+					<property editable="false" name="Morts subites">
+						<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+					</property>
+				</properties>
+			</propertiesList>
+		</property>
+		<property editable="false" name="Talents principaux">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="false" name="Baratin">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Combat">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Corps à corps">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Défense">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Discrétion">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Discussion">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Enquête">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Fouille">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Intrusion">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Médecine">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Séduction">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Tir">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+				</properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>PA</pointPool>
+				<args>
+					<arg key="factor">1</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Talents exotiques">
+			<propertiesList fixe="false" open="true">
+				<propertyChoice>
+					<property editable="true" name="Contorsionnisme">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Humour">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Hypnotisme">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Kama sutra">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Jeu">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Langage animal">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Narcolepsie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Pickpocket">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Prestidigitation">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Sixième sens">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Torture">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Ventriloquie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+				</propertyChoice>
+				<properties></properties>
+				<defaultProperty>
+					<property editable="true" name="???">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">1</arg>
+								<arg key="startValue">1.0</arg>
+							</args>
+						</historyFactory>
+					</property>
+				</defaultProperty>
+			</propertiesList>
+		</property>
+		<property editable="false" name="PA en talents secondaires">
+			<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+			<min>
+				<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+			</min>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>PA</pointPool>
+				<args></args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Talents secondaires">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="false" name="Acrobatie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Aisance sociale">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Art">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Athlétisme">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Conduite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Culture génle">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Hobby">
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Informatique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Intimidation">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Langues">
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="false" name="">
+									<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+										<pointPool>Points de talents secondaires</pointPool>
+										<args>
+											<arg key="cost">1</arg>
+										</args>
+									</historyFactory>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Métier">
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Navigation">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Pilotage">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+					</property>
+					<property editable="false" name="Sv. criminel">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Sv. espion">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Sv. militaire">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Sv. occulte">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Science">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Survie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+					<property editable="false" name="Technique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<propertiesList canRemoveElement="true" fixe="false" open="true">
+							<properties></properties>
+							<defaultProperty>
+								<property editable="true" name="">
+									<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1</Value>
+									<min>
+										<Value class="com.mrprez.gencross.value.DoubleValue">1</Value>
+									</min>
+									<max>
+										<Value class="com.mrprez.gencross.value.DoubleValue">7.5</Value>
+									</max>
+									<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+								</property>
+							</defaultProperty>
+						</propertiesList>
+					</property>
+				</properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>Points de talents secondaires</pointPool>
+				<args>
+					<arg key="factor">1</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Pouvoirs">
+			<propertiesList fixe="true" open="false">
+				<propertyChoice>
+					<property editable="true" name="Absorption d'amour">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption de Force">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption de Presence">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption de Violence">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption de Volonte">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption de gentillesse">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Absorption du mal">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Adherence">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Anaerobiose">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Arme Exaltee">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Armure Corporelle">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Arts martiaux">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation d'Agilite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation de Foi">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation de Force">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation de Perception">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation de Presence">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Augmentation de Volonte">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Aura d'inattention">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Aura de Confusion">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Aura de Courage">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Aura de pacification">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Beatification">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Benediction beaute">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Benediction fertilite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Benediction guerison des folies">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Benediction guerison des maladies">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Benediction rajeunissement">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Boomerang">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Cameleon">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Cauchemar">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Champ de force">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Champ electrique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Champ magnetique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Chant angelique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Charme">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Controle des animaux">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Conversion mentale">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Conversion physique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Corps digital">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">8</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Corps electrique">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">7</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Corps gazeux">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Corps liquide">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Couche de glace">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Decharge electrique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Deguisement superficiel">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Dephasage">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Deplacement temporel">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection des creatures invisibles">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection des ennemis">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection du danger">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection du futur proche">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection du mal">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Detection du mensonge">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Domination">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Douleur">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Eclat de glace">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Elastique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Esprits multiples">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Esquive acrobatique">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Etouffement">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Graisse">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Illusions">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Immunite contre l'acide">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Immunite contre l'electricite">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Immunite contre le feu">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Immunite contre le froid">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Immunite contre les maladies et les poisons">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Invisibilite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Jet d'eau benite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Jet d'eau du robinet">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Jet de flammes">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Jeune">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Langage universel">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Lecture d'Aura">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Lire les pensees">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Lueur insoutenable">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Lumiere celeste">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Membre blinde">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Nemesis">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Non-detection">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Obscurite">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Odorat">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Onde de choc">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Paralysie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Parasite intellectuel">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Peau acide">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Pertubation de pouvoir">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Peur">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Polymorphie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Protection de l'ame">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Protection de l'esprit">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Psychometrie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Rebond">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Reduction">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Regeneration">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Reve">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Sens surdeveloppes">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">6</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Sommeil">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Superiorite martiale">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Talent Universel">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Telekinesie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Telepathie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Teleportation">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">5</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Tourbillon de feu">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Trait d'energie">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Vitesse">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Voix imperieuse">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">4</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Vol">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+					<property editable="true" name="Volonte supra-normale">
+						<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.DoubleValue" offset="0.5">1.0</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.DoubleValue">2.5</Value>
+						</max>
+						<renderer class="com.mrprez.gencross.impl.mv.InsMvRenderer"/>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="factor">3</arg>
+							</args>
+						</historyFactory>
+					</property>
+				</propertyChoice>
+				<properties></properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>PA</pointPool>
+				<args>
+					<arg key="factor">3</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Pouvoirs de grade">
+			<propertiesList fixe="true" open="false">
+				<propertyChoice></propertyChoice>
+				<properties></properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>Pouvoirs de grade</pointPool>
+				<args>
+					<arg key="cost">1</arg>
+				</args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="PP">
+			<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+			<min>
+				<Value class="com.mrprez.gencross.value.IntValue">4</Value>
+			</min>
+			<max>
+				<Value class="com.mrprez.gencross.value.IntValue">15</Value>
+			</max>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>PA</pointPool>
+				<args></args>
+			</historyFactory>
+		</property>
+		<property editable="false" name="Avantages">
+			<propertiesList fixe="true" open="true">
+				<properties></properties>
+				<defaultProperty>
+					<property editable="true" name="">
+						<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">0</Value>
+						</min>
+						<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args></args>
+						</historyFactory>
+					</property>
+				</defaultProperty>
+			</propertiesList>
+		</property>
+		<property editable="false" name="Limitations">
+			<propertiesList fixe="true" open="true">
+				<properties></properties>
+				<defaultProperty>
+					<property editable="false" name="">
+						<historyFactory class="com.mrprez.gencross.history.ConstantHistoryFactory">
+							<pointPool>PA</pointPool>
+							<args>
+								<arg key="cost">-5</arg>
+							</args>
+						</historyFactory>
+					</property>
+				</defaultProperty>
+			</propertiesList>
+		</property>
+	</properties>
+	<beforeChangeValueListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeChangeValueListener">
+			<pattern>Caracteristiques#[^#]*</pattern>
+			<arg name="method">checkCaracChangement</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeChangeValueListener">
+			<pattern>Talents[^#]*#[^#]*</pattern>
+			<arg name="method">changeTalentWithSpe</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeChangeValueListener">
+			<pattern>Talents[^#]*#[^#]*#[^#]*</pattern>
+			<arg name="method">changeSpe</arg>
+		</listener>
+	</beforeChangeValueListeners>
+	<afterChangeValueListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Caracteristiques#[^#]*</pattern>
+			<arg name="method">changeCarac</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Caracteristiques#Foi/Chance</pattern>
+			<arg name="method">changePPImpliedCarac</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Caracteristiques#Volonté</pattern>
+			<arg name="method">changePPImpliedCarac</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Talents principaux#.*</pattern>
+			<arg name="method">changeTalent</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterChangeValueListener">
+			<pattern>Talents exotiques#.*</pattern>
+			<arg name="method">changeTalent</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.impl.AlimentationPropertyListener">
+			<pattern>PA en talents secondaires</pattern>
+			<arg name="pointPool">Points de talents secondaires</arg>
+			<arg name="factor">2</arg>
+		</listener>
+	</afterChangeValueListeners>
+	<beforeAddPropertyListeners>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Boomerang</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Volonte supra-normale</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Champ electrique</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Imunite contre l'electricite</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Chant angelique</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">15</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Conversion mentale</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Volonte supra-normale</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Couche de glace</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Imunite contre le froid</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Domination</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Esprits multiples</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Volonte supra-normale</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Lecture d'Aura</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Lumiere celeste</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Nemesis</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">15</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Parasite intellectuel</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Volonte supra-normale</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Peau acide</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Imunite contre l'acide</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Pertubation de pouvoir</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Superiorite martiale</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">15</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Talent Universel</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">30</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Tenebres sataniques</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Tourbillon de feu</pattern>
+			<arg name="requiredPropertyName">Pouvoirs#Imunite contre le feu</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Voix imperieuse</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Science infuse</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">25</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Confusion</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Affinité animale</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Rafistolage</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Contrecoup metabolique</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Detection des desseins</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Sermon</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Sanctification</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.requirement.RequirementBeforeAddListener">
+			<pattern>Pouvoirs#Benevolat</pattern>
+			<arg name="requiredPropertyName">PP</arg>
+			<arg name="requiredMin">20</arg>
+		</listener>
+	</beforeAddPropertyListeners>
+	<afterAddPropertyListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomAfterAddPropertyListener">
+			<pattern>Talents[^#]*#[^#]*#[^#]*</pattern>
+			<arg name="method">addSpecialite</arg>
+		</listener>
+	</afterAddPropertyListeners>
+	<beforeDeletePropertyListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeDeletePropertyListener">
+			<pattern>Talents[^#]*#[^#]*#[^#]*</pattern>
+			<arg name="method">removeSpecialite</arg>
+		</listener>
+	</beforeDeletePropertyListeners>
+	<afterDeletePropertyListeners>
+	</afterDeletePropertyListeners>
+	<passToNextPhaseListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Choix Superieur</phase>
+			<arg name="method">passToCreationPhase</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Creation</phase>
+			<arg name="method">passToGrade0</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Grade 0</phase>
+			<arg name="method">passToGrade1</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Grade 1</phase>
+			<arg name="method">passToGrade2</arg>
+		</listener>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Grade 2</phase>
+			<arg name="method">passToGrade3</arg>
+		</listener>
+	</passToNextPhaseListeners>
+	<formulas>
+		<formula>Blessures#Points de fatigue=#Caracteristiques#Force# + #Caracteristiques#Volonté#</formula>
+		<formula>Blessures#Blessures légères=#Caracteristiques#Force# + 2</formula>
+		<formula>Blessures#Blessures graves=( #Caracteristiques#Force# + 2 ) * 2</formula>
+		<formula>Blessures#Blessures fatales=( #Caracteristiques#Force# + 2 ) * 3</formula>
+		<formula>Blessures#Morts subites=( #Caracteristiques#Force# + 2 ) * 4</formula>
+	</formulas>
+	<history></history>
+</personnage>
