@@ -6,6 +6,5 @@
 	<entry key="genCross.plugin.gcrFileName">com/mrprez/gencross/impl/mv/Mv.gcr</entry>
 	<entry key="genCross.plugin.version">1.4</entry>
 	<entry key="genCross.plugin.appendixFileName">com/mrprez/gencross/impl/mv/Mv.properties</entry>
-	<entry key="genCross.plugin.migration.1.1">com.mrprez.gencross.impl.mv.MigrationFrom1_1To1_2</entry>
 </properties>
 
