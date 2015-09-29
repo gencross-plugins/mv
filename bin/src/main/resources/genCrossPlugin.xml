@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="genCross.plugin.name">MV</entry>
+	<entry key="genCross.plugin.className">com.mrprez.gencross.impl.mv.Mv</entry>
+	<entry key="genCross.plugin.gcrFileName">com/mrprez/gencross/impl/mv/Mv.gcr</entry>
+	<entry key="genCross.plugin.version">1.5</entry>
+	<entry key="genCross.plugin.appendixFileName">com/mrprez/gencross/impl/mv/Mv.properties</entry>
+</properties>
+
