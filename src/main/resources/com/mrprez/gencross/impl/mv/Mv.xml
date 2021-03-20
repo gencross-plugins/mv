@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <personnage name="MV" version="1.5" gencrossVersion="1.14"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:noNamespaceSchemaLocation="http://mrprez.dyndns.org:8080/gencross-web/gencross-plugin.xsd">
+		xmlns="https://gencross-plugin.mrprez.com"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<phase name="Choix Superieur"/>
 	<phaseList>
 		<phase name="Choix Superieur"/>
